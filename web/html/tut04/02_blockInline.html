@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블록&인라인 타입 예제</title>
+
+    <style>
+        span {
+            background-color: red;
+            display: inline-block;
+        }
+
+        p {
+            width: 200px;
+            height: 150px;
+            background-color: tomato;
+            
+        }
+
+        .nav {
+            display: flex;
+            /* justify-content: space-between; */
+            justify-content: space-around;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .btn1 {
+             cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- float flex -> block -> Inline 으로 변경 
+        블록 : 나머지 -> 브라우저 해상도과 상관없이 무조건 100% 넓이를 가짐
+        인라인 : a span table img -> 내용물만큼 사각형 넓이 생성
+    -->
+
+    <span>메뉴1</span>
+    <span>메뉴2</span>
+    <span>메뉴3</span>
+    <span>메뉴4</span>
+
+    <div class="nav">
+        <p>
+            <img class="img1" src="/tut01/images/cat.jpg" alt="">
+            <button class="btn1">버튼</button>
+        </p>
+        <p>
+            <img class="img2" src="/tut01/images/cat.jpg" alt="">
+            <button class="btn2">버튼</button>
+        </p>
+        <p>
+            <img src="/tut01/images/cat.jpg" alt="">
+        </p>
+    </div>
+
+    <a href="">메뉴1</a>
+    <a href="">메뉴2</a>
+    <a href="">메뉴3</a>
+
+    <script>
+        const btn = document.querySelector(".btn1");
+        const btn2 = document.querySelector(".btn2");
+        const Img1 = document.querySelector(".img1");
+        const Img2 = document.querySelector(".img2");
+        
+        function change() {
+            btn.onmouseover = () => {
+            Img1.src = "/tut01/images/cat2.jpg";
+
+            btn.onmouseout = () => {
+                Img1.src = "/tut01/images/cat.jpg";
+            }
+         }
+     }
+        change();
+
+     function display() {
+        Img2.style.display = "none";
+
+        btn2.onclick = () => {
+            Img2.style.display = "block";
+        }
+     }
+     display();
+    </script>
+</body>
+</html>
