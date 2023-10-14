@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ul li로 메뉴 만들기</title>
+    
+
+    <style>
+        ul li {
+            list-style-type: none;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-between; /* left right center 묶음이동 */ 
+            /* space between 좌우여백 x 개체 사이 여백 o  */
+            /* space around 좌우여백 o 개체 사이 여백 o  */
+        }
+
+        nav {
+            /* flex 세로 정렬은 height 값이 꼭 있어야함 */
+            background-color: blanchedalmond;
+            height: 300px;
+            display: flex;
+            align-items: center;
+        }
+
+        
+
+        nav ul a {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="">Home</a>
+            </li>
+            <li>
+                <a href="">About</a>
+            </li>
+            <li>
+                <a href="">Shop</a>
+            </li>
+            <li>
+                <a href="">Donate</a>
+            </li>
+            <li>
+                <a href="">Contact</a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
